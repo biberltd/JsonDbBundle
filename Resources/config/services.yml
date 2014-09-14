@@ -1,4 +1,4 @@
 services:
-#    biber_ltd_json_db.example:
-#        class: BiberLtd\Bundle\JsonDbBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    biber_ltd_json_db.example:
+        class: BiberLtd\Bundle\JsonDbBundle\Services\JsonDb
+        arguments: []

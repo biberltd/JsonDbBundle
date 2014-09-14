@@ -11,5 +11,10 @@
             "email": "said.imamoglu@biberltd.com"
         }
     ],
+    "autoload": {
+        "psr-0": { "BiberLtd\\Bundle\\CoreBundle": "" }
+
+    },
+    "target-dir": "BiberLtd/Bundle/CoreBundle",
     "minimum-stability": "dev"
 }
