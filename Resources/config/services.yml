@@ -1,4 +1,4 @@
 services:
-    biber_ltd_json_db.example:
+    biber_ltd_json_db.service:
         class: BiberLtd\Bundle\JsonDbBundle\Services\JsonDb
         arguments: []

@@ -12,9 +12,9 @@
         }
     ],
     "autoload": {
-        "psr-0": { "BiberLtd\\Bundle\\CoreBundle": "" }
+        "psr-0": { "BiberLtd\\Bundle\\JsonDbBundle": "" }
 
     },
-    "target-dir": "BiberLtd/Bundle/CoreBundle",
+    "target-dir": "BiberLtd/Bundle/JsonDbBundle",
     "minimum-stability": "dev"
 }
