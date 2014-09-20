@@ -14,7 +14,7 @@ class JsonTable {
             $this->fileData = json_decode(file_get_contents($this->jsonFile), true);
             $this->lockFile();
         }
-        else throw new Exception("JsonTable Error: File not found: ".$_jsonFile);
+        else throw new \Exception("JsonTable Error: File not found: ".$_jsonFile);
     }
 
     public function __destruct() {
@@ -25,12 +25,12 @@ class JsonTable {
     protected function lockFile() {
         $handle = fopen($this->jsonFile, "w");
         if (flock($handle, LOCK_EX)) $this->fileHandle = $handle;
-        else throw new Exception("JsonTable Error: Can't set file-lock");
+        else throw new \Exception("JsonTable Error: Can't set file-lock");
     }
 
     protected function save() {
         if (fwrite($this->fileHandle, json_encode($this->fileData))) return true;
-        else throw new Exception("JsonTable Error: Can't write data to: ".$this->jsonFile);
+        else throw new \Exception("JsonTable Error: Can't write data to: ".$this->jsonFile);
     }
 
     public function selectAll() {
