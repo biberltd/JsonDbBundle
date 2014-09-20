@@ -44,7 +44,8 @@ class JsonDb {
     }
 
     public function __call($op, $args) {
-        if ($args && method_exists("JsonTable", $op)) {
+//        if ($args && method_exists("JsonTable", $op)) {
+        if ($args) {
             $table = $args[0].$this->fileExt;
             return $this->getTableInstance($table)->$op($args);
         } else throw new \Exception("JsonDB Error: Unknown method or wrong arguments ");
